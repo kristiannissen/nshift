@@ -1,14 +1,39 @@
 # frozen_string_literal: true
 
+require "logger"
+
+require "nshift/shipment"
+
 require_relative "nshift/version"
 
 module Nshift
-  extend self
+  module_function
 
   class Error < StandardError; end
-  # Your code goes here...
+
+  # Initialize
+  @logger = Logger.new($stdout)
+  @logger.level = Logger::DEBUG
+  @options = { "Labels": "PDF" }
+  # Option keys
+  OPTION_KEYS = %(Labels TrackingURL TicketUserName
+                  WorkstationID DropZoneLabelPrinterKey
+                  DropZoneDocPrinterKey UseShippingRules
+                  ServiceLevel RerunCSROnError Token
+                  ReturnShipment PriceCalculation UseErrorLabels)
+  # Update options
+  def update_options(options)
+    # Validate options keys
+    options.each_key do |k|
+      raise "Error" unless OPTION_KEYS.include?(k.to_s)
+    end
+
+    @options = options
+
+    nil
+  end
 
   def say_hello
-    "hello Kitty"
+    "Hello Kitty"
   end
 end
