@@ -1,0 +1,205 @@
+{
+  "InstallationID": "",
+  "Kind": 1,
+  "OrderNo": "ST41276187",
+  "PickupDt": "2025-08-21T00:00:00",
+  "Weight": 1000,
+  "ActorCSID": 0,
+  "Temperature": 1,
+  "CarriagePayer": 1,
+  "CarrierConceptID": 47,
+  "CarrierCSID": 142,
+  "SubcarrierConceptID": 98,
+  "SubcarrierCSID": 251,
+  "ProdConceptID": 553,
+  "ProdCSID": 1122,
+  "StackCSID": 25632,
+  "PayerAccountAtCarrier": "01007170",
+  "SenderAccountAtCarrier": "01007170",
+  "Addresses": [
+    {
+      "Kind": 1,
+      "Name1": "Test test",
+      "Street1": "Test Vej 2",
+      "PostCode": "4638",
+      "City": "Kristiansand S",
+      "Phone": "+4512345678",
+      "Mobile": "+4512345678",
+      "Email": "test@test.dk",
+      "Attention": "Test Test",
+      "CountryCode": "NO",
+      "Residential": false
+    },
+    {
+      "Kind": 10,
+      "Name1": "Pakkeboks MENY Rona",
+      "Street1": "GAMLE STRØMMEVEI 2",
+      "PostCode": "4638",
+      "City": "KRISTIANSAND S",
+      "CustNo": "110054",
+      "CountryCode": "NO",
+      "ERPRef": "110054",
+      "Residential": false
+    },
+    {
+      "Kind": 9,
+      "Name1": "Test AS",
+      "Street1": "c/o Logistikksenteret",
+      "PostCode": "0060",
+      "City": "OSLO",
+      "POPostCode": "2450",
+      "POCity": "KØBENHAVN SV",
+      "CustNo": "0",
+      "CountryCode": "DK",
+      "ERPRef": "0",
+      "Residential": false
+    },
+    {
+      "Kind": 11,
+      "Residential": false
+    },
+    {
+      "Kind": 14,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 4,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 17,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 3,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 5,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 8,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 13,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 18,
+      "CountryCode": "DK",
+      "Residential": false
+    },
+    {
+      "Kind": 2,
+      "Name1": "Test A/S",
+      "Name2": "Test",
+      "Street1": "Sleipnersvej 666",
+      "PostCode": "4600",
+      "City": "Køge",
+      "Phone": "004712345678",
+      "Attention": "Test",
+      "CountryCode": "DK",
+      "Residential": false
+    }
+  ],
+  "Amounts": [],
+  "References": [
+    {
+      "Kind": 54,
+      "Value": "B"
+    },
+    {
+      "Kind": 34,
+      "Value": "$AUTO$$FNC1$42157804638$FNC1$"
+    },
+    {
+      "Kind": 56,
+      "Value": "(421)57804638"
+    },
+    {
+      "Kind": 329,
+      "Value": ""
+    },
+    {
+      "Kind": 330,
+      "Value": ""
+    }
+  ],
+  "Lines": [
+    {
+      "LineWeight": 1000,
+      "PkgWeight": 1000,
+      "Pkgs": [
+        {
+          "ItemNo": 1,
+          "PkgNo": "00370733745868494008"
+        }
+      ],
+      "References": [
+        {
+          "Kind": 23,
+          "Value": "Textile"
+        },
+        {
+          "Kind": 52,
+          "Value": "PNLU15"
+        }
+      ],
+      "Number": 1
+    }
+  ],
+  "Services": [
+    47001,
+    47023
+  ],
+  "ShpDocuments": [],
+  "ProductSettings": {
+    "DateTimeReferences": [
+      {
+        "ReferenceID": 108,
+        "DefaultEmpty": 0,
+        "ShowTime": 1,
+        "ShowDate": 1,
+        "DefaultValue": "2025-08-22T15:47:02"
+      },
+      {
+        "ReferenceID": 109,
+        "DefaultEmpty": 0,
+        "ShowTime": 0,
+        "ShowDate": 1,
+        "DefaultValue": "2025-08-21T15:47:02"
+      },
+      {
+        "ReferenceID": 110,
+        "DefaultEmpty": 0,
+        "ShowTime": 0,
+        "ShowDate": 1,
+        "DefaultValue": "2025-08-21T15:47:02"
+      },
+      {
+        "ReferenceID": 111,
+        "DefaultEmpty": 0,
+        "ShowTime": 0,
+        "ShowDate": 1,
+        "DefaultValue": "2025-08-21T15:47:02"
+      },
+      {
+        "ReferenceID": 9,
+        "DefaultEmpty": 0,
+        "ShowTime": 0,
+        "ShowDate": 1,
+        "DefaultValue": "2025-08-21T15:47:02"
+      }
+    ]
+  },
+  "CorrelationID": "ca6d8f1d-fa6a-4380-8b22-ddd1a32e1d49"
+}

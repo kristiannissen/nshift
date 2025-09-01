@@ -7,7 +7,7 @@ require "nshift/shipment"
 require_relative "nshift/version"
 
 module Nshift
-  module_function
+  extend self
 
   class Error < StandardError; end
 
