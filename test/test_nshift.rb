@@ -21,18 +21,17 @@ class TestNshift < Minitest::Test
   end
 
   def test_update_options_exception
-    e = assert_raises(RuntimeError) do
+    e = assert_raises(ArgumentError) do
       Nshift.update_options({ DoesNotExist: "Help" })
     end
 
-    assert_equal(/Error/.match?(e.message), true)
+    assert_equal(/DoesNotExist/.match?(e.message), true)
   end
 
   def test_shipment_typeerror_exception
     e = assert_raises(TypeError) do
       Nshift.submit_shipment(data: "hello", options: @options)
     end
-    @logger.debug(e.message)
 
     assert_equal(/Data/.match?(e.message), true)
   end
@@ -47,5 +46,25 @@ class TestNshift < Minitest::Test
 
     s = Nshift.submit_shipment(data: f, options: @options)
     assert_equal(s.has_key?("ShpCSID"), true)
+  end
+
+  def test_get_stacks
+    s = Nshift.get_stacks
+
+    assert_equal(s.has_key?("Carriers"), true)
+  end
+
+  def test_transmit_stack_error
+    e = assert_raises(ArgumentError) do
+      Nshift.transmit_stack(stack_id:)
+    end
+
+    assert_equal(//.match?(e.message))
+  end
+
+  def test_transmit_stack
+    s = Nshift.transmit_stack(stack_id: 25632)
+
+    assert_equal(s.has_key?("BatchCSID"), true)
   end
 end

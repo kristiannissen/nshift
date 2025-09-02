@@ -3,6 +3,7 @@
 require "logger"
 
 require "nshift/shipment"
+require "nshift/stack"
 
 require_relative "nshift/version"
 
@@ -25,7 +26,7 @@ module Nshift
   def update_options(options)
     # Validate options keys
     options.each_key do |k|
-      raise "Error" unless OPTION_KEYS.include?(k.to_s)
+      raise ArgumentError, "#{k} is not a valid option" unless OPTION_KEYS.include?(k.to_s)
     end
 
     @options = options
