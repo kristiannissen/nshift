@@ -26,4 +26,16 @@ module Nshift
 
     res
   end
+
+  def get_batch_shipments(batch_csid:)
+    raise ArgumentError, "Batch_csid is mandatory, got #{batch_csid}" if batch_csid.nil?
+
+    res = post_form(cmd: "GetBatchShipments", data: {
+                      'BatchCSID': batch_csid,
+                    }, options: {})
+
+    raise res["ErrorMessages"].join(",") if res.has_key?("ErrorMessages")
+
+    res
+  end
 end

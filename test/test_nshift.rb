@@ -72,4 +72,18 @@ class TestNshift < Minitest::Test
 
     assert(b.has_key?("Count"))
   end
+
+  def test_get_batch_shipments
+    b = Nshift.get_batch_shipments(batch_csid: 104921375)
+
+    asserti_true(b.has_key?("Shipments"), true)
+  end
+
+  def test_get_batch_shipments_error
+    e = assert_raises(RuntimeError) do
+      Nshift.get_batch_shipments(batch_csid: 42)
+    end
+
+    assert_equal(e.message.match?(/BatchCSID/), true)
+  end
 end
