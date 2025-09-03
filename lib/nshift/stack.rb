@@ -8,7 +8,7 @@ module Nshift
   # https://helpcenter.nshift.com/hc/en-us/articles/360001457853-Methods#getstacks
   def get_stacks
     res = post_form(cmd: "GetStacks", data: {}, options: {})
-    # TODO: raise exception
+
     res
   end
 

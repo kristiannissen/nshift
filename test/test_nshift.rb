@@ -6,7 +6,6 @@ require "time"
 require "date"
 
 require "nshift"
-require "nshift/shipment"
 
 require "fixture_helper"
 
@@ -66,5 +65,11 @@ class TestNshift < Minitest::Test
     s = Nshift.transmit_stack(stack_id: 25632)
 
     assert_equal(s.has_key?("BatchCSID"), true)
+  end
+
+  def test_get_batch_list
+    b = Nshift.get_batch_list(count: 5)
+    @logger.debug(b)
+    assert(b)
   end
 end

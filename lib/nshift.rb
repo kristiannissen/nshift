@@ -4,6 +4,7 @@ require "logger"
 
 require "nshift/shipment"
 require "nshift/stack"
+require "nshift/batch"
 
 require_relative "nshift/version"
 
