@@ -55,10 +55,10 @@ class TestNshift < Minitest::Test
 
   def test_transmit_stack_error
     e = assert_raises(ArgumentError) do
-      Nshift.transmit_stack(stack_id:)
+      Nshift.transmit_stack()
     end
 
-    assert_equal(//.match?(e.message))
+    assert_equal(e.message.match?(/stack_id/), true)
   end
 
   def test_transmit_stack
@@ -69,7 +69,7 @@ class TestNshift < Minitest::Test
 
   def test_get_batch_list
     b = Nshift.get_batch_list(count: 5)
-    @logger.debug(b)
-    assert(b)
+
+    assert(b.has_key?("Count"))
   end
 end
