@@ -29,7 +29,7 @@ class TestNshift < Minitest::Test
   end
 
   def test_shipment_typeerror_exception
-    e = assert_raises(TypeError) do
+    e = assert_raises(ArgumentError) do
       Nshift.submit_shipment(data: "hello", options: @options)
     end
 
